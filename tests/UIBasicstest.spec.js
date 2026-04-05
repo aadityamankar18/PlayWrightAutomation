@@ -43,14 +43,23 @@ test.only('UI Controls', async ({page})=>
     const dropDown = page.locator("select.form-control");
 
     await userName.fill("rahulshettyacademy");
-    await passWord.fill("Learning@830$3mK2");
+    await passWord.fill("Learning@830$3mK2");                           
     await dropDown.selectOption("consult");
     await signIn.click();
 
-    
-    await page.pause();
+    await page.locator(".radiotextsty").last().click();
+    await page.locator("#okayBtn").click();
+    console.log(await page.locator(".radiotextsty").last().isChecked());
+    await expect(page.locator(".radiotextsty").last()).toBeChecked();
 
-    
+    await page.locator("#terms").click();
+    await expect(page.locator("#terms")).toBeChecked();
+    await page.locator("#terms").uncheck();
+    expect(await page.locator("#terms").isChecked()).toBeFalsy();
+
+
+    // await page.pause();
+
 
 });
 
