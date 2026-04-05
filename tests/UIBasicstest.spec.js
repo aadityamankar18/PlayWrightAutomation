@@ -32,7 +32,7 @@ test('Browser Context Playwright test', async ({browser})=>
 
 });
 
-test.only('UI Controls', async ({page})=>
+test('UI Controls', async ({page})=>
 
 {
     await page.goto("https://rahulshettyacademy.com/loginpagePractise/");
