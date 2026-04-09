@@ -84,12 +84,7 @@ test.only("Child Windows Handling", async ({browser})=>
     const domain =arrayText[1].split(" ")[0];
     // console.log(domain);
     await page.locator('#username').fill(domain);
-    console.log(await page.locator('#username').textContent());
-
-
-    
-     
-
+    console.log(await page.locator('#username').inputValue());
 
 });
 

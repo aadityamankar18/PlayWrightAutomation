@@ -13,7 +13,8 @@ const config = ({
   use: {
       browserName: 'chromium',
       headless: false,
-      viewport: null
+      viewport: null,
+      trace: 'on'
   },
 });
 
