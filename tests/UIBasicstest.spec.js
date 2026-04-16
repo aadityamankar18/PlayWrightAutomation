@@ -23,7 +23,7 @@ test('Browser Context Playwright test', async ({browser})=>
 
     await userName.fill("");
     await userName.fill("rahulshettyacademy");
-    await signIn.click();
+    await signIn.click  ();
     console.log(await cardTitles.first().textContent());
     console.log(await cardTitles.nth(1).textContent());
     const allTiles = await cardTitles.allTextContents()
@@ -59,11 +59,7 @@ test('UI Controls', async ({page})=>
     expect(await page.locator("#terms").isChecked()).toBeFalsy();
 
     await expect(documentLink).toHaveAttribute("class", "blinkingText");
-
-
     // await page.pause();
-
-
 });
 
 test.only("Child Windows Handling", async ({browser})=>

@@ -29,10 +29,31 @@ test.only('Browser Context Playwright test', async ({page})=>
             break;
         }
     }
+
+    await page.locator("[routerlink*='cart']").click();
+    await page.locator("div li").first().waitFor();
+
+    const bool = page.locator("h3:has-text('ZARA COAT 3')").isVisible();   //css selector
+    expect(bool).toBeTruthy();
+    await page.locator("text='Checkout'").click();
+    await page.locator("input[type='text']").nth(1).fill("123");
+    await page.locator("input[type='text']").nth(2).fill("Aaditya V Mankar");
+    await page.locator("input[type='text']").nth(3).fill("rahulshettyacademy");
+
     await page.pause();
 
 
 
+
+
+
+     
+
+
+
+
+
+    
     // ZARA COAT 3
 
 
