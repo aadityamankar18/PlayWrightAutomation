@@ -40,7 +40,7 @@ test.only('Browser Context Playwright test', async ({page})=>
     await page.locator("input[type='text']").nth(2).fill("Aaditya V Mankar");
     await page.locator("input[type='text']").nth(3).fill("rahulshettyacademy");
 
-    await page.pause();
+    //await page.pause();
 
 
 
