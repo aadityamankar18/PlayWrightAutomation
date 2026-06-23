@@ -42,24 +42,6 @@ test.only('Browser Context Playwright test', async ({page})=>
 
     //await page.pause();
 
-
-
-
-
-
-     
-
-
-
-
-
-    
     // ZARA COAT 3
-
-
-
-
-
     
 });
-
